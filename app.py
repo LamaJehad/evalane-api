@@ -1,6 +1,8 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from evalane_sim_pipeline import EvalaneSimPipeline
+import __main__
+__main__.EvalaneSimPipeline = EvalaneSimPipeline
 from datetime import datetime
 
 app = Flask(__name__)
