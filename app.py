@@ -7,7 +7,9 @@ app = Flask(__name__)
 CORS(app)
 
 # Load the pipeline once when the server starts
-pipeline = EvalaneSimPipeline.load("evalane_sim_pipeline.pkl")
+import pickle
+with open("evalane_pipeline.pkl", "rb") as f:
+    pipeline = pickle.load(f)
 print("Pipeline loaded successfully!")
 
 
